@@ -4,48 +4,22 @@ const envelopes = [
     {
         name: 'Vincent',
         id: 16,
-        categories: [
-            {
-                category: 'Rent',
-                amount: 1000
-            },
-            {
-
-                category: 'Groceries',
-                amount: 1000
-            },
-            {
-                category: 'Healthcare',
-                amount: 200
-            },
-            {
-                category: 'Energy',
-                amount: 300
-            }
-        ]
-    }, 
+        categories: {
+            rent: 1000,
+            groceries: 1000,
+            healthcare: 200,
+            energy: 300
+        }
+    },
     {
         name: 'Leah',
-        id:19,
-        categories: [
-            {
-                category: 'Rent',
-                amount: 1200
-            },
-            {
-
-                category: 'Groceries',
-                amount: 1200
-            },
-            {
-                category: 'Healthcare',
-                amount: 300
-            },
-            {
-                category: 'Energy',
-                amount: 300
-            }
-        ]
+        id: 19,
+        categories: {
+            rent: 1000,
+            groceries: 1000,
+            healthcare: 200,
+            energy: 300
+        }
     }
 ];
 

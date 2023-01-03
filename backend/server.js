@@ -11,7 +11,7 @@ const envelopes = data.envelopes;
 const app = express();
 
 // // helper function
-const { getEnvelopeById, randomIdGenerator, getIndexById } = require('./utils');
+const { getEnvelopeById, randomIdGenerator, getIndexById, calculateBalance } = require('./utils');
 
 
 
@@ -49,13 +49,16 @@ app.get('/api/envelopes', (req, res) => {
 //  add new user
 app.post('/api/envelopes/users', (req, res) => {
     const nameQuery = req.query.name;
-    if (nameQuery) {
+    const salary = req.query.salary;
+    if (nameQuery && salary) {
 
         // // Create new user object
         const newUser = {
             name: nameQuery,
             id: randomIdGenerator(),
-            categories: {}
+            salary: parseFloat(salary),
+            categories: {},
+            balance: parseFloat(salary)
         };
         // // Push new user to envelopes list
         envelopes.push(newUser);
@@ -120,6 +123,33 @@ app.put('/api/envelopes/users', (req, res) => {
 
 });
 
+// update user's salary
+app.put('/api/envelopes/users', (req, res) => {
+    const id = req.query.id;
+    const newSalary = req.query.salary;
+    if (id && newSalary) {
+        const envelope = getEnvelopeById(id, envelopes);
+        if (!envelope) return res.status(404).send('Id Not Found');
+        envelope.salary = parseFloat(newSalary);
+    } else {
+        res.status(400).send();
+    }
+});
+
+// update user's balance
+app.put('/api/envelopes/balance', (req, res) => {
+    if (req.query.id) {
+        const envelope = getEnvelopeById(req.query.id, envelopes);
+        if (!envelope) return res.status(404).send('Id Not Found');
+        // // calculate current balance from salary and categories
+        const newBalance = calculateBalance(envelope);
+        // // update balance 
+        envelope.balance = newBalance;
+        res.send(envelope);
+    } else {
+        res.status(400).send();
+    }
+});
 
 // * ---------------------------------------DELETE--------------------------------------- * \\
 

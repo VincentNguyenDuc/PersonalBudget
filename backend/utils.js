@@ -30,10 +30,24 @@ function validateUserName(userName) {
     return schema.validate(userName);
 }
 
+function calculateTotalExpenses(envelope) {
+    let sum = 0;
+    let categoriesValue = Object.values(envelope.categories);
+    for (const value of categoriesValue) {
+        sum += value;
+    }
+    return sum;
+}
+
+function calculateBalance(envelope) {
+    return envelope.salary - calculateTotalExpenses(envelope);
+}
+
 
 
 module.exports = {
     getEnvelopeById,
     randomIdGenerator,
-    getIndexById
+    getIndexById,
+    calculateBalance
 };

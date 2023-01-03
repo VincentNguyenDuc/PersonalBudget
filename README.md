@@ -12,24 +12,7 @@
 
 ## General Information
 
-This is a practice Back-end Engineer project. For this project, I built an API that allows clients to create and manage a personal budget. The data is stored in a list of envelopes, each envelope includes id, user's name, user's salary, expense categories, and envelope balance.
-
-Example:
-
-```yaml
-{
-    name: 'Vincent',
-    id: 16,
-    salary: 5000,
-    categories: {
-        rent: 1000,
-        groceries: 1000,
-        healthcare: 200,
-        energy: 300
-    },
-    balance: 2500
-}
-```
+This is a practice Back-end Engineer project. For this project, I built an API that allows clients to create and manage a personal budget.
 
 ## Technologies
 

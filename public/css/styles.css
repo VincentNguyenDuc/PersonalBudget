@@ -49,6 +49,10 @@ html {
     color: #4a4a4a;
 }
 
+.header li a:hover {
+    opacity: 0.7;
+}
+
 @media only screen and (max-width: 550px) {
     .header {
         flex-direction: column;
@@ -60,14 +64,14 @@ html {
 }
 
 /* Banner */
-
+/* #D9CAB3 */
 .banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50rem;
-    background: url("/public/images/envelopes-banner.jpg") center center no-repeat;
+    height: 42rem;
+    background: url("/public/images/envelopes-banner-2.jpg") center center no-repeat;
     background-size: cover;
     color: #ffb78c;
 }
@@ -84,7 +88,7 @@ html {
 
 .banner h1 {
     padding-top: 1.11rem;
-    font-size: 11rem;
+    font-size: 5rem;
     font-weight: 900;
     font-style: "Abril Fatface", sans-serif;
 }
@@ -109,10 +113,13 @@ html {
     }
 }
 
+/* FEATURES */
 
+.features {
+    background-color: rgb(254, 231, 218);
+}
 
-/* Footer */
-
+/* FOOTER */
 footer {
     display: flex;
     align-items: center;
@@ -121,31 +128,12 @@ footer {
     font-family: "Croissant One", "Merriweather", serif;
 }
 
-footer .image-container {
-    width: 400px;
-}
-
-footer .content {
+footer .contact {
     flex-grow: 1;
     font-style: italic;
     color: #9b9b9b;
     line-height: 1.5;
-}
-
-footer p {
-    padding-bottom: 1.66rem;
-}
-
-footer p:last-child {
-    padding-bottom: 0;
-}
-
-footer .author {
-    color: #ffb78c;
-}
-
-footer em {
-    color: #cfcfcf;
+    align-content: center;
 }
 
 @media only screen and (max-width: 750px) {
@@ -153,10 +141,20 @@ footer em {
         flex-direction: column;
         padding: 0 10% 2rem 10%;
     }
+}
 
-    footer .image-container {
-        height: 300px;
-        margin-bottom: 2rem;
-        overflow: hidden;
-    }
+/* ICONS */
+/* Style all font awesome icons */
+.fa {
+    padding: 1px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
 }

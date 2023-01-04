@@ -74,12 +74,24 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50rem;
-    background: url("/public/images/envelopes-banner-1.jpg") center center no-repeat;
+    height: 55rem;
+    background: url("/public/images/envelopes-banner-3.jpg") center center no-repeat;
     background-size: cover;
-    color: #ffb78c;
+    color: #FAF9F6;
 }
 
+
+.banner h2 {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border: 8px solid #FAF9F6;
+    font-size: 7.44rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+}
 @media only screen and (max-width: 750px) {
     .banner {
         height: 40rem;
@@ -96,27 +108,23 @@ html {
 /* FOOTER */
 footer {
     display: flex;
-    padding: 2rem 10% 2rem 10%;
+    padding: 1rem 10% 1rem 10%;
     background-color: #212121;
     flex-direction: column;
     text-align: center;
 }
 
-footer .contact {
-    flex-grow: 1;
-    color: #9b9b9b;
-    align-content: center;
-    list-style: 1.5;
-}
-
+/* Overview information */
 footer .about {
-    padding: 2rem 10% 2rem 10%;
+    padding: 1rem 10% 1rem 10%;
     font-style: bold;
     color: grey;
 }
-footer .about a, a:visited {
-    color: inherit;
+
+footer .about a:visited {
+    color: grey;
 }
+
 footer .about a:hover {
     opacity: 0.7;
 }
@@ -125,7 +133,20 @@ footer h1 {
     font-size: larger;
     color: white;
     font-weight: bold;
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
+}
+
+footer p {
+    text-align: justify;
+}
+
+
+/* Contact information */
+footer .contact {
+    flex-grow: 1;
+    color: #9b9b9b;
+    align-content: center;
+    list-style: 1.5;
 }
 
 /* ICONS */

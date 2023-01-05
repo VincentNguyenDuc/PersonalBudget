@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Croissant One";
+    src: url(../styles/fonts/CroissantOne-Regular.ttf);
+}
+
+html {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+* {
+    font-family: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+
+/* Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55rem;
+    background: url("/public/images/envelopes-banner-3.jpg") center center no-repeat;
+    background-size: cover;
+    color: #FAF9F6;
+}
+
+
+.banner h2 {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border: 8px solid #FAF9F6;
+    font-size: 7.44rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+
+}
+@media only screen and (max-width: 750px) {
+    .banner {
+        height: 40rem;
+    }
+    .banner h2 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .banner {
+        height: 30rem;
+    }
+
+    .banner h2 {
+        font-size: 3rem;
+    }
+}
+
+

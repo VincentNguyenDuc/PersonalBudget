@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
     <title>Personal Budget API</title>
     <!-- CSS -->
@@ -19,7 +20,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    
+
 <body>
     <!-- HEADER -->
     <nav class="header">
@@ -35,11 +36,15 @@
     <div class="log-in">
         <form>
             <label for="user-id">Please Enter Your User ID</label>
-            <br/>
+            <br />
             <input class="submit-space" name="user-id" id="user-id" required min="1" max="100" />
-            <input class="submit-button" type="submit" value="Log In" />
+            <input class="submit-button" type="submit" value="Log In" id="user-submit" />
         </form>
+        <div id="envelopes-container"></div>
     </div>
+
+    <!-- Script -->
+    <script src="../js/script.js"></script>
 </body>
 
 
@@ -48,8 +53,11 @@
     <div class="about">
         <h1>ABOUT</h1>
         <p class="project-overview">
-            Personal Budget is a practice Web Development project. In this project, I build an API using JavaScript, Node.js and Express.js
-            Clients will follow the <a href="https://lakeareabank.com/envelope-budgeting-traditional-modified-ways-to-save-money/#:~:text=The%20idea%20behind%20envelope%20budgeting,amount%20from%20the%20appropriate%20envelope." target="_blank">Envelopes Budgeting Principles</a>
+            Personal Budget is a practice Web Development project. In this project, I build an API using JavaScript,
+            Node.js and Express.js
+            Clients will follow the <a
+                href="https://lakeareabank.com/envelope-budgeting-traditional-modified-ways-to-save-money/#:~:text=The%20idea%20behind%20envelope%20budgeting,amount%20from%20the%20appropriate%20envelope."
+                target="_blank">Envelopes Budgeting Principles</a>
             and be able to create, read, update, and delete their personal envelope.
         </p>
     </div>

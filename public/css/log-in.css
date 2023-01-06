@@ -16,7 +16,7 @@ html {
 
 @font-face {
     font-family: "Croissant One";
-    src: url(../styles/fonts/CroissantOne/CroissantOne-Regular.ttf);
+    src: url(../styles/fonts/CroissantOne-Regular.ttf);
 }
 
 * {

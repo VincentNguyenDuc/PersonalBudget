@@ -32,7 +32,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 60rem;
-    background: url("/public/images/envelopes-banner-3.jpg") center center no-repeat;
+    background: url("../images/envelopes-banner-3.jpg") center center no-repeat;
     background-size: cover;
     color: #FAF9F6;
 }

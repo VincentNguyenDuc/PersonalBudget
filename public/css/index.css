@@ -14,8 +14,13 @@ html {
     }
 }
 
+@font-face {
+    font-family: "Croissant One";
+    src: url(../styles/fonts/CroissantOne/CroissantOne-Regular.ttf);
+}
+
 * {
-    font-family: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Croissant One" ,ui-sans-serif, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 
@@ -26,7 +31,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 55rem;
+    height: 60rem;
     background: url("/public/images/envelopes-banner-3.jpg") center center no-repeat;
     background-size: cover;
     color: #FAF9F6;

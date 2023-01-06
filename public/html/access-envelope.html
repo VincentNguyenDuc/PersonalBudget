@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/public/css/fixed/footer.css">
     <link rel="stylesheet" type="text/css" href="/public/css/fixed/header.css">
     <link rel="stylesheet" type="text/css" href="/public/css/log-in.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/index.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +33,12 @@
 
     <!-- LOG-IN FORMS-->
     <div class="log-in">
-        <div class="log-in-images"></div>
-        <div class="forms"> ID </div>
+        <form>
+            <label for="user-id">Please Enter Your User ID</label>
+            <br/>
+            <input class="submit-space" name="user-id" id="user-id" required min="1" max="100" />
+            <input class="submit-button" type="submit" value="Log In" />
+        </form>
     </div>
 </body>
 

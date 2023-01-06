@@ -1,0 +1,29 @@
+html {
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@font-face {
+    font-family: "Croissant One";
+    src: url(../styles/fonts/CroissantOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Croissant One";
+    src: url(../styles/fonts/CroissantOne-Regular.ttf);
+}
+
+* {
+    font-family: Verdana, "Croissant One" ,ui-sans-serif, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

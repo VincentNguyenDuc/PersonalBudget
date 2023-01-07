@@ -9,6 +9,7 @@
   - [Project Objectives](#project-objectives)
   - [Setup](#setup)
   - [Endpoints](#endpoints)
+  - [Progress](#progress)
 
 ## General Information
 
@@ -62,3 +63,7 @@ DELETE
 
 - `/api/envelopes/users/id={id}` - deletes an envelope by id
 - `/api/envelopes/categories?id={id}&category={category}` - deletes a category
+
+## Progress
+
+The project's user interface is currently under development

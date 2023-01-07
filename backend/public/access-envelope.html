@@ -29,17 +29,22 @@
 
     <!-- LOG-IN FORMS-->
     <div class="log-in">
-        <form>
-            <label for="user-id">Please Enter Your User ID</label>
+        <div id="form">
+            <label for="user-number">Please Enter Your User ID</label>
             <br />
-            <input class="submit-space" name="user-id" id="user-id" required min="1" max="100" />
-            <input class="submit-button" type="submit" value="Log In" id="user-submit" />
-        </form>
-        <div id="envelopes-container"></div>
+            <input id="user-number" required/>
+            <button id="submit-button">Log In</button>
+            <!-- Response text -->
+            <div id="envelope-container">
+            </div>
+        </div>
+
     </div>
 
+
+
     <!-- Script -->
-    <script src="../js/script.js"></script>
+    <script src="log-in.js"></script>
 </body>
 
 

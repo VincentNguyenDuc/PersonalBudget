@@ -38,7 +38,7 @@ app.get('/api/envelopes', (req, res) => {
 
     } else {
         // // No query then send all envelopes
-        res.send(envelopes);
+        res.status(400).send();
     }
 });
 

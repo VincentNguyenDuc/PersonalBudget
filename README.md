@@ -66,4 +66,8 @@ DELETE
 
 ## Progress
 
-The project's user interface is currently under development
+The project's user interface is currently under development:
+
+- Adding Front-end features
+- Improving databases
+- Fixing bugs

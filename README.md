@@ -71,3 +71,5 @@ The project's user interface is currently under development:
 - Adding Front-end features
 - Improving databases
 - Fixing bugs
+
+The project's database is under development.

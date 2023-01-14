@@ -66,10 +66,11 @@ DELETE
 
 ## Progress
 
-- The project's UI and UX is currently under development:
+The project's UI and UX is currently under development:
 
 - Adding Front-end features
-- Improving databases
 - Fixing bugs
 
 The project's database is under development.
+
+- Adding PostgreSQL database

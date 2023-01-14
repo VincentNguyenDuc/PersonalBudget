@@ -68,8 +68,9 @@ DELETE
 
 - The project's UI and UX is currently under development:
 
-  + Adding Front-end features
-  + Improving databases
-  + Fixing bugs
+- Adding Front-end features
+- Fixing bugs
 
-- The project's database is currently under development.
+The project's database is under development.
+
+- Replacing json files with postgreSQL database

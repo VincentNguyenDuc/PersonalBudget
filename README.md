@@ -21,6 +21,7 @@ This is a practice Back-end Engineer project. For this project, I built an API t
 - Node.js
 - Express.js
 - HTML & CSS
+- PostgreSQL
 
 ## Project Objectives
 
@@ -31,6 +32,7 @@ This is a practice Back-end Engineer project. For this project, I built an API t
 - Use the command line to navigate your files and folders
 - Use Postman to test API endpoints
 - Use HTML and CSS to display user interface
+- Use PostgreSQL Database to store, retrieve, update and delete users'data
 
 ## Setup
 

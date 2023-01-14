@@ -55,10 +55,24 @@ const getCategoriesById = (req, res) => {
     });
 };
 
+// post new user
+const postNewUser = (req, res) => {
+    const {name, salary, email, age, jobs, address} = req.body;
+
+    pool.query('INSERT INTO users (name, salary, email, age, jobs, address) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [name, salary, email, age, jobs, address], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            res.status(204).send('New User Added!');
+        }
+    });
+};
+
 
 
 module.exports = {
     getUsers,
     getUserById,
-    getCategoriesById
+    getCategoriesById,
+    postNewUser
 };

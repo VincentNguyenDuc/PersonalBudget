@@ -9,6 +9,9 @@ const db = require('./database/queries');
 const PORT = process.env.PORT || 4001;
 app.use(express.static('public'));
 
+app.use(express.json()); // for parsing application/json
+app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 // * ---------------------------------------GET--------------------------------------- * \\
 
 // get all users
@@ -22,17 +25,10 @@ app.get('/api/categories/:id', db.getCategoriesById);
 
 // * ---------------------------------------POST--------------------------------------- * \\
 
-
-
-
-
-
-
-
-
-
-
-
+// create a new user
+app.post('/api/users/new', db.postNewUser);
+// * ---------------------------------------PUT---------------------------------------- * \\
+// * -------------------------------------DELETE--------------------------------------- * \\
 
 
 

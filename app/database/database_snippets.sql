@@ -1,8 +1,8 @@
 CREATE TABLE users (
-    id INTEGER PRIMARY KEY,
-    name varchar(50) NOTNULL,
+    id INTEGER SERIAL PRIMARY KEY,
+    name varchar(50) NOT NULL,
     salary FLOAT NOTNULL,
-    email varchar(50) NOTNULL,
+    email varchar(50) NOT NULL,
     age INTEGER,
     jobs varchar(30),
     address varchar(70)

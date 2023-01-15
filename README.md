@@ -32,14 +32,16 @@ This is a practice Back-end Engineer project. For this project, I built an API t
 - Use the command line to navigate your files and folders
 - Use Postman to test API endpoints
 - Use HTML and CSS to display user interface
-- Use PostgreSQL Database to store, retrieve, update and delete users'data
+- Use PostgreSQL and Postbird to set up and create databases and tables
+- Use PostgreSQL queries to store, retrieve, update and delete users'data
 
 ## Setup
 
-In order to run the program, you need to install Node.js on your computer:
+In order to run the program, you need to install Node.js and set up PostgreSQL database on your computer:
 
-- [Download](https://nodejs.org/en/download/) the binaries
-- Once installed, you can then start the Express server by typing `node server.js`
+- Follow this post (<https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/>) to set up the environment
+- Once installed, you have to set up the database follow the snippets `/app/database/database_snippets.sql`
+- After that, you can then start the Express server by typing `node server.js`
 
 ## Endpoints
 
@@ -47,24 +49,20 @@ Once you have the server up and running, the following end points will be reacha
 
 GET
 
-- `/api/envelopes` - returns all envelopes
-- `/api/envelopes?id={id}` - returns an envelope by id
+- `/api/users` - returns all users
+- `/api/users/user?id={id}` - returns user by id
+- `/api/envelope/:id` - returns envelope by id
 
 POST
 
-- `/api/envelopes/users?name={name}&salary={salary}` - creates a new user
-- `/api/envelopes/categories?id={id}&category={category}&amount={amount}` - create or update a category
+- `/api/users/new` - creates new user from the data in body of request
 
 PUT
 
-- `/api/envelopes/users?id={id}&name={name}` - updates user's name
-- `/api/envelopes/users?id={id}&salary={salary}` - updates user's salary
-- `/api/envelopes/users?id={id}` - calculates user's balance base on salary and expenses, then update the balance
+- `/api/users/info/:id` - updates user info
+- `/api/envelope/update/:id` - updates envelope
 
 DELETE
-
-- `/api/envelopes/users/id={id}` - deletes an envelope by id
-- `/api/envelopes/categories?id={id}&category={category}` - deletes a category
 
 ## Progress
 
@@ -73,6 +71,4 @@ The project's UI and UX is currently under development:
 - Adding Front-end features
 - Fixing bugs
 
-The project's database is under development.
 
-- Adding PostgreSQL database

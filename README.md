@@ -64,11 +64,11 @@ PUT
 
 DELETE
 
+- `/api/users/delete/:id` - delete user's information and envelope
+
 ## Progress
 
 The project's UI and UX is currently under development:
 
 - Adding Front-end features
 - Fixing bugs
-
-

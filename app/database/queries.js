@@ -102,6 +102,30 @@ const updateEnvelope = (req, res) => {
         });
 };
 
+// delete user
+const deleteUser = (req, res) => {
+    const user_id = parseInt(req.params.id);
+    pool.query('DELETE FROM categories WHERE user_id = $1', [user_id], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            pool.query('DELETE FROM users WHERE id = $1', [user_id], (error, results) => {
+                if (error) {
+                    throw error;
+                } else {
+                    pool.query("SELECT setval('users_id_seq', (SELECT MAX(id) FROM users));", (error, results) => {
+                        if (error) {
+                            throw error;
+                        } else {
+                            res.status(200).send('User deleted successfully!');
+                        }
+                    });
+                }
+            });
+        }
+    });
+};
+
 
 
 module.exports = {
@@ -110,5 +134,6 @@ module.exports = {
     getEnvelopeById,
     postNewUser,
     updateUser,
-    updateEnvelope
+    updateEnvelope,
+    deleteUser
 };

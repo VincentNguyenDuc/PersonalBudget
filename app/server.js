@@ -35,8 +35,11 @@ app.put('/api/users/info/:id', db.updateUser);
 
 // Update user envelope based on id
 app.put('/api/envelope/update/:id', db.updateEnvelope);
+
 // * -------------------------------------DELETE--------------------------------------- * \\
 
+// Delete user
+app.delete('/api/users/delete/:id', db.deleteUser);
 
 
 

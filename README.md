@@ -9,7 +9,7 @@
   - [Project Objectives](#project-objectives)
   - [Setup](#setup)
   - [Endpoints](#endpoints)
-  - [Progress](#progress)
+  - [UI/UX](#uiux)
 
 ## General Information
 
@@ -66,9 +66,6 @@ DELETE
 
 - `/api/users/delete/:id` - delete user's information and envelope
 
-## Progress
+## UI/UX
 
-The project's UI and UX is currently under development:
-
-- Adding Front-end features
-- Fixing bugs
+The project's UI and UX are currently under development.

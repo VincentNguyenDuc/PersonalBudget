@@ -22,22 +22,19 @@ const getUsers = (req, res) => {
 
 // get user by id
 const getUserById = (req, res) => {
-    if (req.query.id) {
-        const id = parseInt(req.query.id);
-        pool.query(`SELECT * FROM users WHERE id = ${id}`, (error, results) => {
-            if (error) {
-                throw error;
-            }
-            else if (results.rowCount === 0) {
-                res.status(404).send('ID NOT FOUND');
-            }
-            else {
-                res.status(200).send(results.rows);
-            }
-        });
-    } else {
-        res.status(400).send();
-    }
+    const id = parseInt(req.params.id);
+    pool.query(`SELECT * FROM users WHERE id = ${id}`, (error, results) => {
+        if (error) {
+            throw error;
+        }
+        else if (results.rowCount === 0) {
+            res.status(404).send('ID NOT FOUND');
+        }
+        else {
+            res.status(200).send(results.rows);
+        }
+    });
+
 };
 
 // get envelope by id

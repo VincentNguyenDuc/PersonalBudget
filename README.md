@@ -50,7 +50,7 @@ Once you have the server up and running, the following end points will be reacha
 GET
 
 - `/api/users` - returns all users
-- `/api/users/user?id={id}` - returns user by id
+- `/api/users/:id` - returns user by id
 - `/api/envelope/:id` - returns envelope by id
 
 POST

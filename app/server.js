@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 app.get('/api/users', db.getUsers);
 
 // get user by id
-app.get('/api/users/user', db.getUserById);
+app.get('/api/users/:id', db.getUserById);
 
 // get envelope by user_id
 app.get('/api/envelope/:id', db.getEnvelopeById);
@@ -31,7 +31,7 @@ app.post('/api/users/new', db.postNewUser);
 // * ---------------------------------------PUT---------------------------------------- * \\
 
 // Update user information based on id
-app.put('/api/users/info/:id', db.updateUser);
+app.put('/api/users/update/:id', db.updateUser);
 
 // Update user envelope based on id
 app.put('/api/envelope/update/:id', db.updateEnvelope);

@@ -33,7 +33,7 @@ const getUserById = (req, res) => {
         else {
             res.status(200).send(results.rows);
         }
-    });
+    }); 
 
 };
 

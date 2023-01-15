@@ -25,9 +25,16 @@ app.get('/api/categories/:id', db.getCategoriesById);
 
 // * ---------------------------------------POST--------------------------------------- * \\
 
-// create a new user
+// create a new user and an envelope corresponding to the user id
 app.post('/api/users/new', db.postNewUser);
+
 // * ---------------------------------------PUT---------------------------------------- * \\
+
+// Update user information based on id
+app.put('/api/users/info/:id', db.updateUser);
+
+// Update user envelope based on id
+// app.put('/api/envelope/:id');
 // * -------------------------------------DELETE--------------------------------------- * \\
 
 

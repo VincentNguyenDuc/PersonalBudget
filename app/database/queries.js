@@ -1,4 +1,4 @@
-const { request } = require('express');
+const { request, response } = require('express');
 
 const Pool = require('pg').Pool;
 const pool = new Pool({
@@ -27,7 +27,7 @@ const getUserById = (req, res) => {
         pool.query(`SELECT * FROM users WHERE id = ${id}`, (error, results) => {
             if (error) {
                 throw error;
-            } 
+            }
             else if (results.rowCount === 0) {
                 res.status(404).send('ID NOT FOUND');
             }
@@ -55,18 +55,38 @@ const getCategoriesById = (req, res) => {
     });
 };
 
-// post new user
+// post new user and also created an envelope corresponding to the user_id
 const postNewUser = (req, res) => {
-    const {name, salary, email, age, jobs, address} = req.body;
+    const { name, salary, email, age, jobs, address } = req.body;
 
     pool.query('INSERT INTO users (name, salary, email, age, jobs, address) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *', [name, salary, email, age, jobs, address], (error, results) => {
         if (error) {
             throw error;
         } else {
-            res.status(204).send('New User Added!');
+            pool.query('INSERT INTO categories (user_id) VALUES ($1) RETURNING *', [results.rows[0].id], (error, results) => {
+                if (error) {
+                    throw error;
+                } else {
+                    res.status(204).send('New User Added!');
+                }
+            }); 
         }
     });
 };
+
+// update user's information
+const updateUser = (req, res) => {
+    const id = parseInt(req.params.id);
+    const { name, salary, email, age, jobs, address } = req.body;
+    pool.query('UPDATE users SET name = $1, salary = $2, email = $3, age = $4, jobs = $5, address = $6 WHERE id = $7', [name, salary, email, age, jobs, address, id], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            res.status(200).send('User data modified!');
+        }
+    });
+};
+
 
 
 
@@ -74,5 +94,6 @@ module.exports = {
     getUsers,
     getUserById,
     getCategoriesById,
-    postNewUser
+    postNewUser, 
+    updateUser
 };

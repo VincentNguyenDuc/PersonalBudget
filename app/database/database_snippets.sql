@@ -7,7 +7,6 @@ CREATE TABLE users (
     jobs varchar(30),
     address varchar(70)
 );
-
 CREATE TABLE categories (
     user_id INTEGER REFERENCES users(id),
     housing FLOAT,
@@ -19,3 +18,27 @@ CREATE TABLE categories (
     shopping FLOAT,
     saving FLOAT,
 );
+alter table categories
+alter column housing
+set default 0;
+alter table categories
+alter column groceries
+set default 0;
+alter table categories
+alter column utilities
+set default 0;
+alter table categories
+alter column transportation
+set default 0;
+alter table categories
+alter column entertainment
+set default 0;
+alter table categories
+alter column emergencies
+set default 0;
+alter table categories
+alter column shopping
+set default 0;
+alter table categories
+alter column saving
+set default 0;

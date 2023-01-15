@@ -20,8 +20,8 @@ app.get('/api/users', db.getUsers);
 // get user by id
 app.get('/api/users/user', db.getUserById);
 
-// get all categories by user_id
-app.get('/api/categories/:id', db.getCategoriesById);
+// get envelope by user_id
+app.get('/api/envelope/:id', db.getEnvelopeById);
 
 // * ---------------------------------------POST--------------------------------------- * \\
 
@@ -34,7 +34,7 @@ app.post('/api/users/new', db.postNewUser);
 app.put('/api/users/info/:id', db.updateUser);
 
 // Update user envelope based on id
-// app.put('/api/envelope/:id');
+app.put('/api/envelope/update/:id', db.updateEnvelope);
 // * -------------------------------------DELETE--------------------------------------- * \\
 
 

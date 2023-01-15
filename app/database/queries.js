@@ -40,8 +40,8 @@ const getUserById = (req, res) => {
     }
 };
 
-// get categories by id
-const getCategoriesById = (req, res) => {
+// get envelope by id
+const getEnvelopeById = (req, res) => {
     const id = parseInt(req.params.id);
     pool.query(`SELECT * FROM categories WHERE user_id = ${id}`, (error, results) => {
         if (error) {
@@ -69,7 +69,7 @@ const postNewUser = (req, res) => {
                 } else {
                     res.status(204).send('New User Added!');
                 }
-            }); 
+            });
         }
     });
 };
@@ -87,13 +87,28 @@ const updateUser = (req, res) => {
     });
 };
 
+// update envelope information base on id
+const updateEnvelope = (req, res) => {
+    const user_id = parseInt(req.params.id);
+    const { housing, groceries, utilities, transportation, entertainment, emergencies, shopping, saving } = req.body;
+    pool.query('UPDATE categories SET housing = $1, groceries = $2, utilities = $3, transportation = $4, entertainment = $5, emergencies = $6, shopping = $7, saving = $8 WHERE user_id = $9',
+        [housing, groceries, utilities, transportation, entertainment, emergencies, shopping, saving, user_id],
+        (error, results) => {
+            if (error) {
+                throw error;
+            } else {
+                res.status(200).send('Envelope data modified!');
+            }
+        });
+};
 
 
 
 module.exports = {
     getUsers,
     getUserById,
-    getCategoriesById,
-    postNewUser, 
-    updateUser
+    getEnvelopeById,
+    postNewUser,
+    updateUser,
+    updateEnvelope
 };

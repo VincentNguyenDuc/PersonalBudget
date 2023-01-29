@@ -20,6 +20,7 @@ This is a practice Back-end Engineer project. For this project, I built an API t
 - JavaScript
 - Node.js
 - Express.js
+- Mocha
 - HTML & CSS
 - PostgreSQL
 

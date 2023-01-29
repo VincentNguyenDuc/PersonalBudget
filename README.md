@@ -26,6 +26,7 @@ This is a practice Back-end Engineer project. For this project, I built an API t
 ## Project Objectives
 
 - Build an API using Node.js and Express
+- Test using Mocha
 - Be able to create, read, update, and delete envelopes
 - Create endpoint(s) to update envelope balances
 - Use Git version control to keep track of works

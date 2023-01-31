@@ -13,7 +13,7 @@
 
 ## General Information
 
-This is a practice Back-end Engineer project. For this project, I built an API that allows clients to create and manage a personal budget.
+This is a practice Back-end Engineer project. For this project, I built an API that allows clients to create and manage a personal budget. The source code is available at (<https://github.com/VincentNguyenDuc/PersonalBudget>)
 
 ## Technologies
 
